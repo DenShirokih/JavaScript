@@ -1,7 +1,6 @@
-const userAnswer = prompt('What is the official name of JavaScript?');
-console.log(userAnswer);
-if (userAnswer.toLowerCase() === 'ECMAScript'.toLowerCase()) {
-  alert('Yep!');
-} else {
-  alert("Don't you know? ECMAScript!");
-}
+let input 
+let total = 0;
+input = prompt("Вводим число");
+input = Number(input);
+total += input;
+console.log(`общая сумма ${total}`)
