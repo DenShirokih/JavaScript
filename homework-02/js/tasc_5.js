@@ -4,3 +4,4 @@
 //     return check
 //     };
 //     console.log(checkForSpam("Get best sale offers now!"));
+clg
