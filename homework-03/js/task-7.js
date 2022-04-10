@@ -98,8 +98,6 @@ const account = {
   },
 };
 
-// [{"id":1649587598214,"type":"deposit","amount":500},{"id":1649587598214,"type":"deposit","amount":700},{"id":1649587598214,"type":"withdraw","amount":222}]
-// {"id":1649587598214,"type":"deposit","amount":500}
 account.deposit(500);
 account.deposit(500);
 account.withdraw(200);
@@ -107,19 +105,3 @@ console.log(account.getBalance());
 console.log(account.transactions);
 console.log(account.getTransactionDetails(1));
 console.log(account.getTransactionTotal(Transaction.WITHDRAW));
-// console.log(account.getBalance()); // 0
-// account.deposit(1000);
-// account.deposit(4444);
-// console.log(account.getBalance()); // 5444
-// account.withdraw(333);
-// console.log(account.getBalance()); // 5111
-// account.withdraw(33333); // Ты бомж
-// account.deposit(100);
-// account.deposit(100);
-// account.deposit(100);
-// account.withdraw(100);
-// account.withdraw(100);
-// account.withdraw(100);
-// console.log(account.getTransactionDetails(2)); // объект второй транзакции (депозит 4444)
-// console.log(account.getTransactionDetails(4)); // объект второй транзакции (депозит 100)
-// console.log(account.getTransactionTotal(Transaction.WITHDRAW)); // 633
