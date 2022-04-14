@@ -4,7 +4,7 @@ class Storage {
   }
 
   getItems() {
-    console.log(`Наши товары : ${this.items}`);
+    return this.items;
   }
 
   addItem(item) {
@@ -27,8 +27,8 @@ const storage = new Storage([
   "Антигравитатор",
 ]);
 
-storage.getItems();
+console.log(storage.getItems());
 storage.addItem("Дроид");
-storage.getItems();
+console.log(storage.getItems());
 storage.removeItem("Нанитоиды");
-storage.getItems();
+console.log(storage.getItems());
