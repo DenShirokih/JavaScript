@@ -3,7 +3,7 @@ const Account = function (login, email) {
   this.email = email;
 };
 Account.prototype.getInfo = function () {
-  console.log(`login: ${this.login} email: ${this.email}`);
+  console.log(`login: ${this.login}; email: ${this.email}`);
 };
 const mango = new Account("Mangozedog", "mango@dog.woof");
 
