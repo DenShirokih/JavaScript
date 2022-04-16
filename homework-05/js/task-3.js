@@ -12,8 +12,8 @@ class Storage {
     console.log(`Товар ${item} успешно добавлен`);
   }
   removeItem(item) {
-    let index = this.items.indexOf(item);
-    if (index != -1) {
+    const index = this.items.indexOf(item);
+    if (index !== -1) {
       this.items.splice(index, 1);
     }
     console.log(`Товар ${item} успешно удален`);
@@ -21,14 +21,14 @@ class Storage {
 }
 
 const storage = new Storage([
-  "Нанитоиды",
-  "Пролонгер",
-  "Железные жупи",
-  "Антигравитатор",
+  'Нанитоиды',
+  'Пролонгер',
+  'Железные жупи',
+  'Антигравитатор',
 ]);
 
 console.log(storage.getItems());
-storage.addItem("Дроид");
+storage.addItem('Дроид');
 console.log(storage.getItems());
-storage.removeItem("Нанитоиды");
+storage.removeItem('Нанитоиды');
 console.log(storage.getItems());
