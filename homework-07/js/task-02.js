@@ -6,3 +6,5 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
+const conterinerRef = document.createElement('div');
