@@ -6,7 +6,7 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const ingredientsListRef = document.querySelector(`#ingredients`);
+const ingredientsListRef = document.querySelector('#ingredients');
 const addListItems = (array, targetNode) => {
   const nodesList = array.map(element => {
     const li = document.createElement('li');
