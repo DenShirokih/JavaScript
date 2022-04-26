@@ -6,16 +6,13 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const listForAddingItems = document.querySelector(`#ingredients`);
-
-const newArray = [];
-const addListItems = array => {
-  array.forEach(element => {
+const ingredientsListRef = document.querySelector(`#ingredients`);
+const addListItems = (array, list) => {
+  const nodesList = array.map(element => {
     const li = document.createElement('li');
     li.textContent = element;
-    newArray.push(li);
+    return li;
   });
+  list.append(...nodesList);
 };
-
-addListItems(ingredients);
-listForAddingItems.append(...newArray);
+addListItems(ingredients, ingredientsListRef);
