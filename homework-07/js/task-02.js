@@ -7,12 +7,12 @@ const ingredients = [
   'Приправы',
 ];
 const ingredientsListRef = document.querySelector(`#ingredients`);
-const addListItems = (array, list) => {
+const addListItems = (array, targetNode) => {
   const nodesList = array.map(element => {
     const li = document.createElement('li');
     li.textContent = element;
     return li;
   });
-  list.append(...nodesList);
+  targetNode.append(...nodesList);
 };
 addListItems(ingredients, ingredientsListRef);
