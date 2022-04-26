@@ -6,4 +6,3 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-let ulList = document.getElementById('ingredients');
