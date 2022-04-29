@@ -17,13 +17,13 @@ const list = document.querySelector('#gallery');
 
 const createGallery = array => {
   list.classList.add('gallery');
-  const createTegs = array
-    .map(element => {
-      const li = `<li><img src='${element.url}' alt='${element.alt}' width='300'/></li>`;
-      return li;
-    })
-    .join('');
-  list.insertAdjacentHTML('beforeend', createTegs);
+  const resultHtml = array.reduce(
+    (acc, element) =>
+      acc +
+      `<li><img src='${element.url}' alt='${element.alt}' width='300'/></li>`,
+    '',
+  );
+  list.insertAdjacentHTML('beforeend', resultHtml);
 };
 
 createGallery(images);
