@@ -4,7 +4,7 @@ const destroyBtnRef = document.querySelector('[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
 
 const btnCreateBoxes = () => {
-  boxes.innerHTML = '';
+  btnRemoveBoxes();
   const num = inputRef.value;
   const dives = [];
   for (let i = 1; i <= num; i += 1) {
@@ -16,7 +16,7 @@ const btnCreateBoxes = () => {
     dives.push(createDiv);
     console.dir(createDiv);
   }
-  boxes.append(...dives);
+  boxesRef.append(...dives);
 };
 const btnRemoveBoxes = () => {
   boxes.innerHTML = '';
