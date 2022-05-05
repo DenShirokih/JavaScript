@@ -1,11 +1,11 @@
 import galleryEl from "./gallery-items.js";
 
 const refs = {
-  galleryList: document.querySelector(".js-gallery"), //ul c изображениями
-  modal: document.querySelector(".js-lightbox"), //модальное окно
-  modalCloseBtn: document.querySelector('button[data-action="close-lightbox"]'), //кнопка закрытия модального окна
+  galleryList: document.querySelector(".js-gallery"),
+  modal: document.querySelector(".js-lightbox"),
+  modalCloseBtn: document.querySelector('button[data-action="close-lightbox"]'),
   modalImage: document.querySelector(".lightbox__image"),
-  modalOverlay: document.querySelector(".lightbox__overlay"), //серый фон в модалке
+  modalOverlay: document.querySelector(".lightbox__overlay"),
 };
 
 const newLi = galleryEl.reduce((acc, { preview, original, description }) => {
@@ -26,8 +26,8 @@ const openModal = (event) => {
     return;
   }
   event.preventDefault();
-  refs.modal.classList.add("is-open"); // Открытие модального окна по клику на элементе галереи.
-  refs.modalImage.src = event.target.dataset.source; // Подмена значения атрибута src элемента img.lightbox__image.
+  refs.modal.classList.add("is-open");
+  refs.modalImage.src = event.target.dataset.source;
   refs.modalImage.alt = event.target.alt;
 };
 
