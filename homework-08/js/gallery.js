@@ -62,14 +62,14 @@ const scrollingImg = (event) => {
   );
   console.log(imgIndex);
   if (event.code === "ArrowRight") {
-    if (imgIndex === galleryEl.length) {
-      imgIndex = galleryEl.length;
+    if (imgIndex === galleryEl.length - 1) {
+      imgIndex -= galleryEl.length;
     }
     imgIndex += 1;
   }
   if (event.code === "ArrowLeft") {
     if (imgIndex === 0) {
-      imgIndex = 0;
+      imgIndex += galleryEl.length;
     }
     imgIndex -= 1;
   }
